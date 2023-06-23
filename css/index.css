@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#w{
+    width: 450px;
+    height: 450px;
+    background-color: #990;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.row{
+    height: 150px;
+    width: 450px;
+    display: flex;
+    justify-content: space-around;
+}
+.ceil{
+    width: 144px;
+    height: 144px;
+    font-size: 64px;
+    background-color: #fff;
+}

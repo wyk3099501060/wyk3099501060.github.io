@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小王记事本</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="w">
+            <div id="map">
+                <div class="row">
+                    <button class="ceil" @click="handle(0)">{{get(list[0])}}</button>
+                    <button class="ceil" @click="handle(1)">{{get(list[1])}}</button>
+                    <button class="ceil" @click="handle(2)">{{get(list[2])}}</button>
+                </div>
+                <div class="row">
+                    <button class="ceil" @click="handle(3)">{{get(list[3])}}</button>
+                    <button class="ceil" @click="handle(4)">{{get(list[4])}}</button>
+                    <button class="ceil" @click="handle(5)">{{get(list[5])}}</button>
+                </div>
+                <div class="row">
+                    <button class="ceil" @click="handle(6)">{{get(list[6])}}</button>
+                    <button class="ceil" @click="handle(7)">{{get(list[7])}}</button>
+                    <button class="ceil" @click="handle(8)">{{get(list[8])}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/vue2.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                list: [0,0,0,0,1,0,0,0,0]
+            },
+            methods: {
+                get:function(ele){
+                    if(ele===-1){
+                        return 'X'
+                    }else if(ele===1){
+                        return 'O'
+                    }else{
+                        return ' '
+                    }
+                },
+                handle:function(ele){
+                    console.log(this.list)
+                    this.list[ele]=1;
+                    console.log(ele)
+                }
+
+            }
+        })
+    </script>
+</body>
+</html>
